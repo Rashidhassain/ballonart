@@ -1,0 +1,41 @@
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; /* spacing between cards */
+}
+
+/* Card styles */
+.featured-imagebox {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+}
+
+.featured-imagebox img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.featured-title h5 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.our_service{
+    position: relative !important;
+    left: 100px !important;
+}
+
+.ballon{
+    color: #c78665;
+}
+
+/* Responsive: mobile */
+@media (max-width: 767px) {
+    .card-grid {
+        grid-template-columns: 1fr; /* one card per row */
+    }
+}

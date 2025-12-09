@@ -1,0 +1,22 @@
+/* Make sure the gradient stays behind the image */
+rs-slide .rev-slidebg {
+    position: relative;
+    z-index: 2 !important;
+}
+
+/* Shape layer gradient should be behind everything */
+rs-slide rs-layer[data-type="shape"] {
+    z-index: 1 !important;
+}
+
+/* Optional: add overlay on top of image (soft dark fade) */
+.rev-slidebg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25); /* adjust if needed */
+    z-index: 3;
+}
