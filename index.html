@@ -364,7 +364,7 @@
                     <!--row-->
                     <div class="card-grid">
 
-                        <div class="featured-imagebox">
+                        <div class="featured-imagebox" >
                             <img src="images/blog/03.jpg" alt="image">
                             <div class="featured-title"><h5>* Surprise room balloon decoration</h5>
                             <p>We create stunning surprise room balloon decorations with personalized colors, themes, and creative designs that instantly transform any space into a magical, memorable celebration experience.</p>
@@ -501,59 +501,63 @@
             <!--welcome-section-->
             <section class="ttm-row welcome-section bg-layer-equal-height break-991-colum clearfix">
                 <div class="container">
-                    <!-- row -->
                     <div class="row">
-                        <div class="col-lg-2 col-md-12">
-                            <!--col-bg-img-one-->
+            
+                        <!-- LEFT CONTENT -->
+                        <div class="col-lg-2 col-md-12 scroll-left scroll-animate">
                             <div class="col-bg-img-one ttm-bg ttm-col-bgimage-yes ttm-bgcolor-grey spacing-2">
                                 <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
                                     <div class="ttm-bg-layer-inner"></div>
                                 </div>
                                 <div class="layer-content">
-                                    <!--section title-->
+            
                                     <div class="section-title">
                                         <div class="title-header">
                                             <h5>Welcome To Ballon art</h5>
                                             <h2 class="title">We Are Sharing Everything With You Forever</h2>
                                         </div>
                                         <div class="title-desc">
-                                            <p>With BalloonArt, every event becomes a masterpiece of color, style, and joy — bringing smiles, excitement, and unforgettable memories for you and your guests. We are committed to sharing our love for balloon art, ensuring that every project exceeds expectations and stands out as a truly remarkable experience..</p>
+                                            <p>With BalloonArt, every event becomes a masterpiece...</p>
                                         </div>
                                     </div>
-                                    <!--section title end-->
+            
                                     <div class="d-sm-flex align-items-center mt-10">
-                                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-icon-btn-right ttm-btn-color-darkgrey mt-20 mr-20" href="about-us.html" title="" tabindex="0">Read More<i class="ti ti-arrow-right"></i>
-                                    </a>
+                                        <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-border ttm-icon-btn-right ttm-btn-color-darkgrey mt-20 mr-20" href="about-us.html">
+                                            Read More<i class="ti ti-arrow-right"></i>
+                                        </a>
+            
                                         <div class="d-flex align-items-center mt-20">
                                             <div class="ttm-play-icon-btn">
                                                 <h6 class="mb-0 position-relative z-index-2">
-                                                    <a href="https://youtu.be/7e90gBu4pas" target="_self" class="ttm_prettyphoto d-flex align-items-center">
-                                                    <span class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-skincolor ttm-icon_element-size-xs ttm-icon_element-style-rounded mr-2 mb-0">
-                                                        <i class="fa fa-play"></i>
-                                                    </span>Watch Video!
-                                                </a>
+                                                    <a href="https://youtu.be/7e90gBu4pas" class="ttm_prettyphoto d-flex align-items-center">
+                                                        <span class="ttm-icon ttm-icon_element-fill ttm-icon_element-color-skincolor ttm-icon_element-size-xs ttm-icon_element-style-rounded mr-2 mb-0">
+                                                            <i class="fa fa-play"></i>
+                                                        </span>Watch Video!
+                                                    </a>
                                                 </h6>
                                             </div>
                                         </div>
+            
                                     </div>
+            
                                 </div>
                             </div>
-                            <!--col-bg-img-one end-->
                         </div>
-                        <div class="col-lg-10 col-md-12">
-                            <!--col-img-img-two-->
+            
+                        <!-- RIGHT IMAGE -->
+                        <div class="col-lg-10 col-md-12 scroll-right scroll-animate">
                             <div class="col-bg-img-two ttm-col-bgimage-yes ttm-bg spacing-1 z-index-0">
-                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
-                                </div>
+                                <div class="ttm-col-wrapper-bg-layer ttm-bg-layer"></div>
                                 <div class="layer-content"></div>
                             </div>
-                            <!--col-img-bg-img-two end-->
+            
                             <img src="images/bg-image/ballon-1.jpg" class="ttm-equal-height-image" alt="bg-image">
                         </div>
+            
                     </div>
-                    <!-- row end -->
                 </div>
             </section>
+            
             <!--welcome-section end-->
 
 
@@ -747,7 +751,7 @@
                                                     <h5>Our Address</h5>
                                                 </div>
                                                 <div class="featured-desc">
-                                                    <p>Evanto HQ 24 Fifth st., Los Angeles, USA</p>
+                                                    <p> josling close w12 7df, school passages UB1 2DS southall. UK</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -771,7 +775,7 @@
                                                     <h5>Email Us</h5>
                                                 </div>
                                                 <div class="featured-desc">
-                                                    <p>example@yourdomain.com</p>
+                                                    <p>enquiries@theballoonart.co.uk</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -957,7 +961,25 @@
     <script src="js/price_range_script.js"></script>
     <script src="js/main.js"></script>
 
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".featured-imagebox");
+        
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.2 });
+        
+            elements.forEach(el => {
+                el.classList.add("scroll-animate");
+                observer.observe(el);
+            });
+        });
+        </script>
+        
     <!-- Revolution Slider -->
 
     <script src="revolution/js/slider.js"></script>
@@ -967,6 +989,29 @@
     <script src='revolution/js/revolution.tools.min.js'></script>
     <script src='revolution/js/rs6.min.js'></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        
+            // Select animation elements
+            const leftElements = document.querySelectorAll(".scroll-left");
+            const rightElements = document.querySelectorAll(".scroll-right");
+            const fadeUpElements = document.querySelectorAll(".scroll-animate");
+        
+            // Observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        entry.target.classList.add("show");
+                    }
+                });
+            }, { threshold: 0.2 });
+        
+            // Observe everything
+            [...leftElements, ...rightElements, ...fadeUpElements].forEach(el => observer.observe(el));
+        
+        });
+        </script>
+        
     <!-- Javascript end-->
 
 </body>
