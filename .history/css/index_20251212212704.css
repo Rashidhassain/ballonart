@@ -1,0 +1,139 @@
+/* Grid layout */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Card styles */
+.featured-imagebox {
+    border: 1px solid #eee;
+    padding: 10px;
+    border-radius: 12px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s forwards;
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image */
+.featured-imagebox img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.45s ease;
+}
+
+/* Hover image zoom */
+.featured-imagebox:hover img {
+    transform: scale(1.08);
+}
+
+/* Card hover effect */
+.featured-imagebox:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+/* Title styles */
+.featured-title h5 {
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #c78665;
+}
+
+/* Section heading */
+.our_service {
+    position: relative !important;
+    left: 100px !important;
+}
+
+/* Ballon color */
+.ballon {
+    color: #c78665;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .our_service {
+        left: 0 !important;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .our_service {
+        left: 0 !important;
+        text-align: center;
+    }
+}
+
+/* ------------ Desktop ------------ */
+.main-menu {
+    display: flex;
+}
+
+.btn-show-menu-mobile {
+    display: none;
+    cursor: pointer;
+}
+
+.menubar-box, 
+.menubar-inner {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    display: block;
+    position: relative;
+    top: 0;
+    transition: 0.3s;
+}
+
+.menubar-inner:before,
+.menubar-inner:after {
+    content: "";
+    width: 30px;
+    height: 3px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+
+.menubar-inner:before { top: -8px; }
+.menubar-inner:after { top: 8px; }
+
+@media (max-width: 991px) {
+    .main-menu {
+        display: none;
+        width: 100%;
+        background: #111;
+        padding: 20px;
+    }
+    .main-menu.menu-open {
+        display: block;
+    }
+}
+

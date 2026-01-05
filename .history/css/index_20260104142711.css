@@ -15,8 +15,6 @@
     border-radius: 8px;
     overflow: hidden;
     background: #fff;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    transition: all 0.3s ease;
 }
 
 /* Image same height for all cards */
@@ -50,10 +48,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-}
-.featured-imagebox:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
 
 
@@ -125,28 +119,3 @@
         text-align: center;
     }
 }
-.whatsapp-float {
-    position: fixed;
-    width: 55px;
-    height: 55px;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 28px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #1ebe5d;
-    color: #fff;
-}
- 
