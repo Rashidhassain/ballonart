@@ -53,6 +53,48 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
 
+    <style>
+        .hero-form-section {
+	position: relative;
+	background-image: url("images/bg-image/gabriel-tudor-V-yhwaT6JrY-unsplash.jpg"); /* from your code */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 100px 0;
+    margin-top: 100px;
+}
+
+/* dark overlay for readability */
+.hero-form-section::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+background: linear-gradient(
+	to right,
+	rgba(255, 255, 255, 0.11),
+	rgba(255, 255, 255, 0.05)
+);
+
+/* background: linear-gradient(
+	to right,
+	rgba(255, 111, 174, 0.35),
+	rgba(123, 97, 255, 0.2)
+); */
+	z-index: 0;
+}
+
+.hero-form-section .container {
+	position: relative;
+	z-index: 1;
+}
+
+/* form card glass effect */
+.hero-form-section .card {
+	backdrop-filter: blur(10px);
+	border-radius: 20px;
+}
+
+    </style>
 </head>
 
 <body>
@@ -112,62 +154,113 @@
 
 
         <!--START REVOLUTION SLIDER 6.0.1-->
-        <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery">
-            <rs-module id="rev_slider_1_1" data-version="6.1.2" class="rev_slider_1_1_height">
+     <section class="py-5 hero-form-section">
+	<div class="container position-relative">
+		<div class="row justify-content-center align-items-center">
+		
+			<!-- Hero Content -->
+			<div class="col-lg-6 mb-5 mb-lg-0 text-white">
+				<div class="pe-lg-3">
+					<h1 class="display-3 fw-bold mb-3">
+						Make Every Occasion <span class="text-warning">Magical</span> with Balloons
+					</h1>
+					<p class="lead mb-4">
+						From birthdays to weddings, our premium balloons add color, joy, and charm to every celebration. Let’s make your event unforgettable!
+					</p>
+				</div>
 
-                <rs-slides>
+				<div class="row">
+					<div class="col-sm-6 mb-3 mb-sm-0">
+						<div class="d-flex">
+							<div class="text-warning me-3">
+								<i class="fa fa-gift fa-2x"></i>
+							</div>
+							<div>
+								<h6 class="mb-0">Custom Designs</h6>
+								<p>Tailored Balloon Arrangements</p>
+							</div>
+						</div>
+					</div>
 
-                    <rs-slide data-key="rs-1" data-title="Slide" data-thumb="images/bg-image/ballon-1.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:zoomout;sl:100;">
+					<div class="col-sm-6">
+						<div class="d-flex">
+							<div class="text-warning me-3">
+								<i class="fa fa-clock fa-2x"></i>
+							</div>
+							<div>
+								<h6 class="mb-0">On-Time Delivery</h6>
+								<p>We Make Your Event Perfect</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                        <img src="images/bg-image/gabriel-tudor-V-yhwaT6JrY-unsplash.jpg" title="slide-banner-two" width="1920" height="705" class="rev-slidebg" data-no-retina>
+			<!-- Form -->
+			<div class="col-lg-6">
+				<div class="ps-lg-5">
+					<div class="card shadow-lg border-0 text-white h-100">
+						<div class="card-body bg-primary p-4 p-xl-5 rounded">
+							<h2 class="pb-3 text-center">
+								Order Your Balloon Arrangement Today
+							</h2>
 
-                        <rs-layer id="slider-2-slide-4-layer-0" data-type="text" data-rsp_ch="on" data-xy="x:c;y:m;yo:-25px,-25px,-65px,-43px;" data-text="w:normal;s:90,90,75,67;l:100,100,80,70;fw:600,600,700,700;a:center;" data-dim="w:auto,auto,auto,400px;" data-frame_0="rY:360deg;"
-                            data-frame_1="e:back.out;st:150;sp:500;sR:150;" data-frame_999="o:0;st:w;sR:8350;" style="z-index:9;font-family:Cormorant;">Designed With Excellence
-                        </rs-layer>
+							<form>
+								<div class="mb-3">
+									<label class="form-label">Full Name</label>
+									<input class="form-control" type="text" placeholder="John Doe">
+								</div>
 
-                        <rs-layer id="slider-2-slide-4-layer-1" data-type="text" data-color="#e5e5e5||#e5e5e5||#e5e5e5||#ffffff" data-rsp_ch="on" data-xy="x:c;xo:0,0,0,580px;y:m;yo:65px,65px,0,-108px;" data-text="w:normal;s:16,16,15,14;l:28,28,24,23;fw:400,400,500,500;a:center;"
-                            data-vbility="t,t,t,f" data-frame_0="sX:0.9;sY:0.9;" data-frame_1="e:power2.inOut;st:370;sp:500;sR:370;" data-frame_999="o:0;st:w;sR:8130;" style="z-index:10;font-family:Hind;">Enjoy thrilling balloon shows, interactive experiences, and a lively atmosphere <br> designed to bring smiles to everyone.
-                        </rs-layer>
+								<div class="mb-3">
+									<label class="form-label">Email Address</label>
+									<input class="form-control" type="email" placeholder="john@example.com">
+								</div>
 
-                        <rs-layer id="slider-2-slide-4-layer-2" data-type="shape" data-rsp_ch="on" data-xy="x:c;xo:0,0,0,360px;y:m;yo:125px,125px,48px,29px;" data-text="w:normal;s:20,20,12,7;l:0,0,15,9;" data-dim="w:1px;h:35px,35px,21px,12px;" data-vbility="t,t,t,f" data-frame_0="y:-50,-50,-31,-19;"
-                            data-frame_1="st:600;sR:600;" data-frame_999="o:0;st:w;sR:8100;" style="z-index:11;background-color:#ffffff;">
-                        </rs-layer>
+								<div class="mb-3">
+									<label class="form-label">Phone Number</label>
+									<input class="form-control" type="tel" placeholder="+1 234 567 890">
+								</div>
 
-                       
+								<div class="mb-3">
+									<label class="form-label">Event Type</label>
+									<select class="form-select">
+										<option selected disabled>Choose Event Type</option>
+										<option>Birthday Party</option>
+										<option>Wedding</option>
+										<option>Baby Shower</option>
+										<option>Corporate Event</option>
+										<option>Other</option>
+									</select>
+								</div>
 
-                        <rs-layer id="slider-2-slide-4-layer-5" data-type="text" data-color="#dedede" data-rsp_ch="on" data-xy="x:c;xo:137px,137px,101px,435px;yo:250px,250px,80px,141px;" data-text="w:normal;s:40,40,30,18;l:60,60,40,24;a:center;" data-vbility="t,t,t,f" data-btrans="rZ:-25;"
-                            data-frame_0="sX:0.9;sY:0.9;" data-frame_1="e:power2.inOut;st:350;sp:500;sR:350;" data-frame_999="o:0;st:w;sR:8150;" style="z-index:8;font-family:Dancing Script;">
-                        </rs-layer>
+								<div class="mb-3">
+									<label class="form-label">Event Date</label>
+									<input class="form-control" type="date">
+								</div>
 
-                    </rs-slide>
+								<div class="mb-3">
+									<label class="form-label">Additional Notes</label>
+									<textarea class="form-control" rows="3" placeholder="Any special requests or themes?"></textarea>
+								</div>
 
-                    <rs-slide data-key="rs-3" data-title="Slide" data-thumb="images/slides/slider-mainbg-02.jpg" data-anim="ei:d;eo:d;s:d;r:0;t:slotzoom-horizontal;sl:d;">
+								<button class="btn btn-dark btn-lg w-100" type="submit">
+									Request a Quote
+								</button>
 
-                        <img src="images/bg-image/happy-films-wrcGYRgGzmw-unsplash.jpg" title="slide-banner-two" width="1920" height="849" class="rev-slidebg" data-no-retina>
+								<p class="mt-3 small fst-italic text-light">
+									*We’ll get back to you within 24 hours.
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 
-                        <rs-layer id="slider-2-slide-3-layer-0" data-type="text" data-rsp_ch="on" data-xy="x:c;y:m;yo:-25px,-25px,-65px,-42px;" data-text="w:normal;s:90,90,75,67;l:100,100,80,70;fw:600,600,700,700;a:center;" data-dim="w:auto,auto,auto,394px;" data-frame_0="rY:360deg;"
-                            data-frame_1="e:back.out;st:150;sp:500;sR:150;" data-frame_999="o:0;st:w;sR:8350;" style="z-index:9;font-family:Cormorant;">Made With Precision
-                        </rs-layer>
+		</div>
+	</div>
+</section>
 
-                        <rs-layer id="slider-2-slide-3-layer-1" data-type="text" data-color="#e5e5e5||#e5e5e5||#e5e5e5||#ffffff" data-rsp_ch="on" data-xy="x:c;xo:0,0,0,642px;y:m;yo:65px,65px,0,-135px;" data-text="w:normal;s:16,16,15,14;l:28,28,24,23;fw:400,400,500,500;a:center;"
-                            data-vbility="t,t,t,f" data-frame_0="sX:0.9;sY:0.9;" data-frame_1="e:power2.inOut;st:370;sp:500;sR:370;" data-frame_999="o:0;st:w;sR:8130;" style="z-index:10;font-family:Hind;">Step into a world of giant balloons, exciting activities, and breathtaking visuals. <br> Your perfect day starts here!
-                        </rs-layer>
 
-                        <rs-layer id="slider-2-slide-3-layer-2" data-type="shape" data-rsp_ch="on" data-xy="x:c;xo:0,0,0,360px;y:m;yo:125px,125px,48px,29px;" data-text="w:normal;s:20,20,12,7;l:0,0,15,9;" data-dim="w:1px;h:35px,35px,21px,12px;" data-vbility="t,t,t,f" data-frame_0="y:-50,-50,-31,-19;"
-                            data-frame_1="st:600;sR:600;" data-frame_999="o:0;st:w;sR:8100;" style="z-index:11;background-color:#ffffff;">
-                        </rs-layer>
-
-                     
-
-                        <rs-layer id="slider-2-slide-3-layer-5" data-type="text" data-color="#dedede" data-rsp_ch="on" data-xy="x:c;xo:80px,80px,64px,435px;yo:248px,248px,80px,141px;" data-text="w:normal;s:40,40,30,18;l:60,60,40,24;a:center;" data-vbility="t,t,t,f" data-btrans="rZ:-25;"
-                            data-frame_0="sX:0.9;sY:0.9;" data-frame_1="e:power2.inOut;st:350;sp:500;sR:350;" data-frame_999="o:0;st:w;sR:8150;" style="z-index:8;font-family:Dancing Script;">
-                        </rs-layer>
-
-                    </rs-slide>
-
-                </rs-slides>
-            </rs-module>
-        </rs-module-wrap>
         <!--END REVOLUTION SLIDER-->
 
 
@@ -207,12 +300,7 @@
                     <!--row-->
                     <div class="card-grid">
 
-                        <div class="featured-imagebox" >
-                            <img src="images/img/ballon-1 (1).jpeg" alt="image">
-                            <div class="featured-title"><h5>* Surprise room balloon decoration</h5>
-                            <p>We create stunning surprise room balloon decorations with personalized colors, themes, and creative designs that instantly transform any space into a magical, memorable celebration experience.</p>
-                            </div>
-                        </div>
+                     
                     
                         <!-- <div class="featured-imagebox">
                             <img src="images/img/ballon-1 (2).jpeg" alt="image">
@@ -222,28 +310,28 @@
                         </div> -->
                     
                         <div class="featured-imagebox">
-                            <img src="images/img/baby-shower.jpeg" alt="image">
+                            <img src="images/bg-image/baby_shower_balloon_decoration.webp" alt="image">
                             <div class="featured-title"><h5>* Baby shower balloon decoration</h5>
                             <p>We design beautiful baby shower balloon decorations featuring soft colors, themed elements, and premium balloons that bring joy, excitement, and warmth to your special celebration.</p>
                             </div>
                         </div>
                     
                         <div class="featured-imagebox">
-                            <img src="images/img/ballon-1 (4).jpeg" alt="image">
+                            <img src="images/bg-image/gender_reveal_balloon_setup.webp" alt="image">
                             <div class="featured-title"><h5>* Gender reveal balloon setup</h5>
                             <p>Our gender reveal balloon setups create unforgettable moments with creative popping ideas, color reveals, and decorative arrangements that make your celebration exciting, emotional, and visually stunning.</p>
                             </div>
                         </div>
                     
                         <div class="featured-imagebox">
-                            <img src="images/img/ballon-1 (5).jpeg" alt="image">
+                            <img src="images/bg-image/anniversary_balloon_decoration.jpg" alt="image">
                             <div class="featured-title"><h5>* Anniversary balloon decoration</h5>
                             <p>Celebrate love with elegant anniversary balloon decorations featuring romantic themes, premium balloons, stylish arrangements, and personalized messages that make your special day truly unforgettable and beautiful.</p>
                             </div>
                         </div>
                     
                         <div class="featured-imagebox">
-                            <img src="images/img/ballon-1 (6).jpeg" alt="image">
+                            <img src="images/bg-image/romantic_proposal_balloon_decor.jpg" alt="image">
                             <div class="featured-title"><h5>* Romantic/proposal balloon décor</h5>
                             <p>We create dreamy romantic and proposal balloon décor with candles, balloons, lights, and themed elements that make your special moment magical, intimate, and unforgettable for your partner.</p>
                             </div>
@@ -265,42 +353,42 @@
                         </div> -->
                     
                         <div class="featured-imagebox">
-                            <img src="images/img/ballon-1 (9).jpeg" alt="image">
+                            <img src="images/bg-image/corporate_event_balloon_decoration.webp" alt="image">
                             <div class="featured-title"><h5>* Corporate event balloon decoration</h5>
                             <p>Our corporate event balloon decorations deliver a professional yet stylish look with branded colors, elegant designs, and premium arrangements that elevate your company’s events and celebrations effortlessly.</p>
                             </div>
                         </div>
                     
                         <div class="featured-imagebox">
-                            <img src="images/img/" alt="image">
+                            <img src="images/bg-image/shop_opening.jpeg" alt="image">
                             <div class="featured-title"><h5>* Store opening balloon arch</h5>
                             <p>We design eye-catching store opening balloon arches that attract attention, highlight your business entrance, and create a welcoming, festive atmosphere that helps draw customers and enhance visibility significantly.</p>
                             </div>
                         </div>
                     
                         <div class="featured-imagebox">
-                            <img src="images/blog/03.jpg" alt="image">
+                            <img src="images/bg-image/graduation_party_decor.jpg" alt="image">
                             <div class="featured-title"><h5>* Graduation Party Decor</h5>
                             <p>Our graduation party decor features themed colors, creative designs, and vibrant arrangements ideal for annual days, fests, farewells, or celebrations, making events more memorable and exciting.</p>
                             </div>
                         </div>
                     
                         <div class="featured-imagebox">
-                            <img src="images/blog/03.jpg" alt="image">
+                            <img src="images/bg-image/balloon_walls.jpg" alt="image">
                             <div class="featured-title"><h5>* Balloon walls</h5>
                             <p>We create stunning balloon walls using premium balloons, elegant patterns, and stylish designs that transform any backdrop into a beautiful, eye-catching centerpiece perfect for photos and decorations.</p>
                             </div>
                         </div>
                     
                         <div class="featured-imagebox">
-                            <img src="images/blog/03.jpg" alt="image">
+                            <img src="images/bg-image/helium_balloon_bouquet.jpg" alt="image">
                             <div class="featured-title"><h5>* Helium balloon bouquet</h5>
                             <p>Our helium balloon bouquets are beautifully arranged using premium balloons, themed colors, and personalized messages, perfect for gifting, celebrations, surprises, and creating joyful moments for loved ones.</p>
                             </div>
                         </div>
                     
                         <div class="featured-imagebox">
-                            <img src="images/blog/03.jpg" alt="image">
+                            <img src="images/bg-image/balloon_centrepieces.webp" alt="image">
                             <div class="featured-title"><h5>* Balloon centrepieces</h5>
                             <p>We design elegant balloon centrepieces with creative themes, premium materials, and stylish arrangements that enhance table décor, elevate event styling, and add a charming decorative touch to celebrations.</p>
                             </div>
@@ -308,7 +396,7 @@
                     
 
                         <div class="featured-imagebox">
-                            <img src="images/blog/03.jpg" alt="image">
+                            <img src="images/bg-image/4_feet_led_number_balloon_setup.jpg" alt="image">
                             <div class="featured-title"><h5>* 4 feet led Number balloon setup</h5>
                             <p>Our 4-feet LED number balloon setups create stunning focal points with bright illuminated numbers, premium balloons, and stylish decorations perfect for birthdays, anniversaries, and milestone celebrations.</p>
                             </div>
@@ -321,15 +409,21 @@
                             </div>
                         </div> -->
                         <div class="featured-imagebox">
-                            <img src="images/blog/03.jpg" alt="image">
+                            <img src="images/bg-image/kids_themed_balloon_decor.png" alt="image">
                             <div class="featured-title"><h5>* Kids’ themed balloon décor</h5>
                             <p>Our kids’ themed balloon décor brings favorite characters, colors, and creative designs to life, making birthdays and celebrations exciting, joyful, visually appealing, and unforgettable for children and families.</p>
                             </div>
                         </div>
                         <div class="featured-imagebox">
-                            <img src="images/blog/03.jpg" alt="image">
+                            <img src="images/bg-image/organic_balloon_garlands.webp" alt="image">
                             <div class="featured-title"><h5>* Organic balloon garlands</h5>
                             <p>We create stunning organic balloon garlands using mixed sizes, premium colors, and artistic styling that beautifully enhance event entrances, stages, photo backdrops, and celebration spaces with elegance.</p>
+                            </div>
+                        </div>
+                           <div class="featured-imagebox" >
+                            <img src="images/bg-image/surprise_room_balloon_decoration.jpg" alt="image">
+                            <div class="featured-title"><h5>* Surprise room balloon decoration</h5>
+                            <p>We create stunning surprise room balloon decorations with personalized colors, themes, and creative designs that instantly transform any space into a magical, memorable celebration experience.</p>
                             </div>
                         </div>
                     </div>
@@ -959,12 +1053,17 @@
     <!-- Javascript end-->
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/message/UDFX55CLDL4PL1"
-    target="_blank"
-    class="whatsapp-float">
-     <i class="fa fa-whatsapp"></i>
- </a>
- 
+<a href="tel:07351572758" class="phone-float" title="Call Us">
+    <i class="fa fa-phone"></i>
+</a>
+
+<a href="https://wa.me/message/UDFX55CLDL4PL1"
+   target="_blank"
+   class="whatsapp-float"
+   title="WhatsApp">
+    <i class="fa fa-whatsapp"></i>
+</a>
+
 
 
 </body>

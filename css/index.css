@@ -129,7 +129,7 @@
     position: fixed;
     width: 55px;
     height: 55px;
-    bottom: 25px;
+    bottom: 80px;
     right: 25px;
     background-color: #25d366;
     color: #fff;
@@ -150,3 +150,28 @@
     color: #fff;
 }
  
+
+.phone-float {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 150px; /* stacked above WhatsApp */
+    right: 25px;
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.phone-float:hover {
+    background-color: #0b5ed7;
+    transform: scale(1.1);
+    color: #fff;
+}
+
