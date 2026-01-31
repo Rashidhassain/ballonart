@@ -298,7 +298,7 @@
 }
 
 .bg-img2 {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgb(0,0,0,0.4)), url(../images/bg-image/ballon-2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0, 0, 0, 0.51)), url(../images/bg-image/birthday-party.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -411,7 +411,7 @@
 }
 
 .col-bg-img-two.ttm-col-bgimage-yes>.ttm-col-wrapper-bg-layer {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/bg-image/ballon-1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(../images/bg-image/full-decoration-white-balloons.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
