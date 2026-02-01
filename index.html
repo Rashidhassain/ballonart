@@ -54,6 +54,13 @@
     <link rel="stylesheet" href="css/index.css">
 
     <style>
+.hero-content-box {
+    background: rgb(33 33 33 / 38%);
+    padding: 2rem;
+    border-radius: 16px;
+    backdrop-filter: blur(2px);
+}
+
 .hero-form-section {
 	position: relative;
 	background-image: url("images/bg-image/gabriel-tudor-V-yhwaT6JrY-unsplash.jpg");
@@ -118,6 +125,18 @@
 	border-radius: 2px;
 }
 
+.btn-whatsapp {
+	background-color: #25D366;
+	color: #fff;
+	border: none;
+}
+
+.btn-whatsapp:hover {
+	background-color: #1ebe5d;
+	color: #fff;
+}
+
+
 /* Responsive tweaks */
 @media (min-width: 768px) {
 	.hero-form-section h1 {
@@ -165,7 +184,7 @@
             <nav class="d-none d-lg-block">
                 <ul class="nav">
                     <li class="nav-item">
-                        <a href="./index.html" class="nav-link text-dark px-3">Balloon</a>
+                        <a href="./index.html" class="nav-link text-dark px-3 fw-bold">Balloon</a>
                     </li>
                     <li class="nav-item">
                         <a href="./wedding-service.html" class="nav-link text-dark px-3">Wedding</a>
@@ -202,111 +221,40 @@
 
 
         <!--START REVOLUTION SLIDER 6.0.1-->
-     <section class="py-5 hero-form-section">
-	<div class="container position-relative">
-		<div class="row justify-content-center align-items-center">
-		
-			<!-- Hero Content -->
-			<div class="col-lg-6 mb-5 mb-lg-0 text-white">
-				<div class="pe-lg-3">
-					<h1 class="display-3 fw-bold mb-3">
-						Make Every Occasion <span class="text-warning">Magical</span> with Balloons
-					</h1>
-					<p class="lead mb-4">
-						From birthdays to weddings, our premium balloons add color, joy, and charm to every celebration. Let’s make your event unforgettable!
-					</p>
-				</div>
+<section class="hero-form-section">
+  <div class="container">
+    <div class="row align-items-center min-vh-75">
+      
+      <!-- Hero Content -->
+      <div class="col-lg-7">
+  <div class="hero-content-box text-white">
+    <h1 class="fw-bold mb-3 text-warning">
+      Make Your Celebration <br class="d-none d-md-block">
+      Unforgettable with Balloon Art
+    </h1>
 
-				<div class="row">
-					<div class="col-sm-6 mb-3 mb-sm-0">
-						<div class="d-flex">
-							<div class="text-warning me-3">
-								<i class="fa fa-gift fa-2x"></i>
-							</div>
-							<div>
-								<h6 class="mb-0">Custom Designs</h6>
-								<p>Tailored Balloon Arrangements</p>
-							</div>
-						</div>
-					</div>
+    <p class="lead mb-4">
+      Custom balloon décor for birthdays, weddings, events & special moments.
+    </p>
 
-					<div class="col-sm-6">
-						<div class="d-flex">
-							<div class="text-warning me-3">
-								<i class="fa fa-clock fa-2x"></i>
-							</div>
-							<div>
-								<h6 class="mb-0">On-Time Delivery</h6>
-								<p>We Make Your Event Perfect</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+    <div class="d-flex gap-3 flex-wrap">
+      <a href="contact-us.html" class="btn btn-warning btn-lg px-4">
+        Get in Touch
+      </a>
 
-			<!-- Form -->
-			<div class="col-lg-6">
-				<div class="ps-lg-5">
-					<div class="card shadow-lg border-0 text-white h-100">
-						<div class="card-body bg-primary p-4 p-xl-5 rounded">
-							<h2 class="pb-3 text-center">
-								Order Your Balloon Arrangement Today
-							</h2>
+      <a href="https://wa.me/1234567890" target="_blank"
+         class="btn btn-whatsapp btn-lg px-4">
+        <i class="fa fa-whatsapp me-2"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
 
-							<form>
-								<div class="mb-3">
-									<label class="form-label">Full Name</label>
-									<input class="form-control" type="text" placeholder="John Doe">
-								</div>
 
-								<div class="mb-3">
-									<label class="form-label">Email Address</label>
-									<input class="form-control" type="email" placeholder="john@example.com">
-								</div>
-
-								<div class="mb-3">
-									<label class="form-label">Phone Number</label>
-									<input class="form-control" type="tel" placeholder="+1 234 567 890">
-								</div>
-
-								<div class="mb-3">
-									<label class="form-label">Event Type</label>
-									<select class="form-select">
-										<option selected disabled>Choose Event Type</option>
-										<option>Birthday Party</option>
-										<option>Wedding</option>
-										<option>Baby Shower</option>
-										<option>Corporate Event</option>
-										<option>Other</option>
-									</select>
-								</div>
-
-								<div class="mb-3">
-									<label class="form-label">Event Date</label>
-									<input class="form-control" type="date">
-								</div>
-
-								<div class="mb-3">
-									<label class="form-label">Additional Notes</label>
-									<textarea class="form-control" rows="3" placeholder="Any special requests or themes?"></textarea>
-								</div>
-
-								<button class="btn btn-dark btn-lg w-100" type="submit">
-									Request a Quote
-								</button>
-
-								<p class="mt-3 small fst-italic text-light">
-									*We’ll get back to you within 24 hours.
-								</p>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-
-		</div>
-	</div>
+    </div>
+  </div>
 </section>
+
         <!--END REVOLUTION SLIDER-->
 
 
@@ -834,31 +782,19 @@
             </div>
 
             <!-- Quick Links -->
-            <div class="col-lg-2 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4">
                 <h5 class="mb-3">Quick Links</h5>
                 <ul class="list-unstyled ">
-                    <li><a href="#" class="text-info text-decoration-none">Home</a></li>
-                    <li><a href="#services" class="text-info text-decoration-none">Services</a></li>
-                    <li><a href="#about" class="text-info text-decoration-none">About Us</a></li>
-                    <li><a href="#contact" class="text-info text-decoration-none">Contact</a></li>
-                    <li><a href="#faq" class="text-info text-decoration-none">FAQ</a></li>
+                    <li><a href="./index.html" class="text-info text-decoration-none">Balloon</a></li>
+                    <li><a href="./wedding-service.html" class="text-info text-decoration-none">Wedding</a></li>
+                    <li><a href="./portfolio-style-01.html" class="text-info text-decoration-none">Portfolio</a></li>
+                    <li><a href="./contact-us.html" class="text-info text-decoration-none">Contact</a></li>
                 </ul>
             </div>
 
-            <!-- Services -->
-            <div class="col-lg-3 col-md-6 mb-4">
-                <h5 class="mb-3">Our Services</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#" class="text-info text-decoration-none">Balloon Decorations</a></li>
-                    <li><a href="#" class="text-info text-decoration-none">Wedding Events</a></li>
-                    <li><a href="#" class="text-info text-decoration-none">Birthday Parties</a></li>
-                    <li><a href="#" class="text-info text-decoration-none">Corporate Events</a></li>
-                    <li><a href="#" class="text-info text-decoration-none">Custom Balloon Art</a></li>
-                </ul>
-            </div>
 
             <!-- Contact & Newsletter -->
-            <div class="col-lg-3 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4">
                 <h5 class="mb-3">Contact Us</h5>
                 <p><i class="fa fa-map-marker me-2"></i>Josling Close, W12 7DF</p>
                 <p><i class="fa fa-map-marker me-2"></i>School Passage, Southall, UB1 2DS</p>

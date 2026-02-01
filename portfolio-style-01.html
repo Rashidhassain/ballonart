@@ -50,34 +50,10 @@
     <link rel='stylesheet' id='rs-plugin-settings-css' href="revolution/css/rs6.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
 
 </head>
-<style>
-    .whatsapp-float {
-    position: fixed;
-    width: 55px;
-    height: 55px;
-    bottom: 25px;
-    right: 25px;
-    background-color: #25d366;
-    color: #fff;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 28px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
-    background-color: #1ebe5d;
-    color: #fff;
-}
-</style>
 <body>
 
     <!--page start-->
@@ -85,95 +61,55 @@
 
 
         <!--header start-->
-        <header id="masthead" class="header ttm-header-style-01">
-            <div id="site-header-menu" class="site-header-menu ttm-bgcolor-darkgrey">
-                <div class="site-header-menu-inner ttm-stickable-header">
-                    <div class="container">
-                        <!--site-navigation -->
-                        <div class="site-navigation d-flex flex-row align-items-center">
-                            <!-- site-branding -->
-                            <div class="site-branding">
-                                <a class="home-link" href="index.html" title="wedco" rel="home">
-                                    <h4>Ballon Art</h4>
-                                    <!-- <img id="logo-img" class="img-center standardlogo" src="images/logo-img.png" alt="logo-img">
-                                    <img id="logo-dark" class="img-center stickylogo" src="images/logo-dark.png" alt="logo-img"> -->
-                                </a>
-                            </div>
-                            <!-- site-branding end -->
-                            <div class="btn-show-menu-mobile menubar menubar--squeeze">
-                                <span class="menubar-box">
-                                    <span class="menubar-inner"></span>
-                                </span>
-                            </div>
-                            <!-- menu -->
-                            <nav class="main-menu menu-mobile ms-auto" id="menu">
-                                <ul class="menu">
-                                    <li class="mega-menu-item">
-                                        <a href="./index.html" >Ballon</a>
-                                    </li>
-                                    <li class="mega-menu-item">
-                                        <a href="./wedding-service.html" >Wedding</a>
-                                    </li>
-                                    <li class="mega-menu-item active">
-                                        <a href="./portfolio-style-01.html" >Portfolio</a>
-                                    </li>
-                                    <li>
-                                        <a href="./contact-us.html">Contact Us</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <div class="header_extra d-flex flex-row align-items-center justify-content-end ">
-                                <div class="header_search">
-                                    <a href="#" class="btn-default search_btn"><i class="ti ti-search"></i></a>
-                                    <div class="header_search_content">
-                                        <form id="searchbox" method="get" action="#">
-                                            <input class="search_query" type="text" id="search_query_top" name="s" placeholder="Enter Keyword" value="">
-                                            <button type="submit" class="btn close-search"><i class="fa fa-search"></i></button>
-                                        </form>
-                                    </div>
-                                </div>
-                                <div class="header_cart">
-                                    <a href="#" class="button-cart">
-                                        <div class="cart_icon"><i class="fa fa-shopping-cart"></i></div>
-                                        <div class="cart_count">0</div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- site-navigation end-->
-                    </div>
-                </div>
+          <header id="masthead" class="header shadow-sm">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-3">
+            
+            <!-- Logo -->
+            <div class="site-branding">
+                <a href="./index.html" class="text-dark text-decoration-none fw-bold fs-4">
+                    The Ballon Art
+                </a>
             </div>
-        </header>
-        <!--header end-->
 
+            <!-- Desktop Menu -->
+            <nav class="d-none d-lg-block">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link text-dark px-3">Balloon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./wedding-service.html" class="nav-link text-dark px-3">Wedding</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./portfolio-style-01.html" class="nav-link text-dark px-3 fw-bold">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact-us.html" class="nav-link text-dark px-3">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
 
-        <!--page-title-->
-        <div class="ttm-page-title-row">
-            <div class="ttm-page-title-row-inner ttm-bgcolor-darkgrey">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-12">
-                            <div class="page-title-heading">
-                                <h2 class="title"> Portfolio Style 1</h2>
-                            </div>
-                            <div class="heading-seperator">
-                                <span></span>
-                            </div>
-                            <div class="breadcrumb-wrapper">
-                                <span>
-                                    <a title="Homepage" href="index.html">Home</a>
-                                </span>
-                                <span class="ttm-bread-sep">&gt;</span>
-                                <span> Portfolio Style 1</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Hamburger for Mobile -->
+            <div class="d-lg-none">
+                <button class="btn btn-outline-dark" id="mobileToggle">
+                    <i class="fa fa-bars fa-lg"></i>
+                </button>
             </div>
         </div>
-        <!--page-title end-->
+    </div>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu d-lg-none bg-white shadow-sm" id="mobileMenu" style="display:none;">
+        <ul class="list-unstyled mb-0">
+            <li><a href="./index.html" class="d-block py-2 px-3 text-dark">Balloon</a></li>
+            <li><a href="./wedding-service.html" class="d-block py-2 px-3 text-dark">Wedding</a></li>
+            <li><a href="./portfolio-style-01.html" class="d-block py-2 px-3 text-dark">Portfolio</a></li>
+            <li><a href="./contact-us.html" class="d-block py-2 px-3 text-dark">Contact Us</a></li>
+        </ul>
+    </div>
+</header>
+        <!--header end-->
 
         <!--site-main start-->
         <div class="site-main">
@@ -358,204 +294,62 @@
         <!-- site-main end -->
 
 
-        <!--footer start-->
-        <footer class="footer widget-footer clearfix">
-            <div class="first-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <div class="first-footer-inner">
-                                <div class="footer-logo">
-                                    <h3>Ballon Art</h3>
-                                </div>
-                                <div class="row no-gutters footer-box">
-                                    <div class="col-md-4 widget-area">
-                                        <div class="featured-box text-center">
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h5>Our Address</h5>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p> josling close w12 7df, school passages UB1 2DS southall. UK</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 widget-area">
-                                        <div class="featured-box text-center">
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h5>Talk To Expert</h5>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>+1234 567 8910 or +1234 567 8911</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 widget-area">
-                                        <div class="featured-box text-center">
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h5>Email Us</h5>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>enquiries@theballoonart.co.uk</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-md-3 col-sm-2"></div>
-                                    <div class="col-md-6 col-sm-8">
-                                        <form id="subscribe-form" class="newsletter-form" method="post" action="#" data-mailchimp="true">
-                                            <div class="mailchimp-inputbox clearfix" id="subscribe-content">
-                                                <p>
-                                                    <i class="fa fa-envelope-o"></i>
-                                                    <input type="email" name="email" placeholder="Your Email Address.." required="">
-                                                </p>
-                                                <p>
-                                                    <button class="submit ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor ttm-icon-btn-right" type="submit">Submit<i class="ti ti-arrow-right"></i></button>
-                                                </p>
-                                            </div>
-                                            <div id="subscribe-msg"></div>
-                                        </form>
-                                    </div>
-                                    <div class="col-md-3 col-sm-2"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          <!--footer start-->
+        <footer class="footer bg-dark text-dark pt-5">
+    <div class="container">
+        <div class="row">
+
+            <!-- About Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="mb-3">About Balloon Art</h5>
+                <p>We create vibrant and unforgettable balloon decorations for all occasions — from birthdays to weddings and corporate events. Our team ensures premium quality and timely delivery for a magical experience.</p>
+                <div class="social-icons mt-3">
+                    <a href="https://www.facebook.com/preyantechnosys19" target="_blank" class="me-2"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="https://twitter.com/PreyanTechnosys" target="_blank" class="me-2"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/preyan-technosys-pvt-ltd/" target="_blank" class="me-2"><i class="fa fa-linkedin fa-lg"></i></a>
                 </div>
             </div>
-            <div class="second-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 widget-area">
-                            <div class="widget widget_text  clearfix">
-                                <h3 class="widget-title">About Ballon Art</h3>
-                                <div class="textwidget widget-text">We’ve delivered stunning balloon art experiences over the last two decades and are now ready to create a whole new chapter of vibrant, memorable celebrations. We have crafted spectacular balloon installations for reputed clients and prestigious events worldwide.<br><br>
-                                </div>
-                                <div class="social-icons circle social-hover">
-                                    <ul class="list-inline">
-                                        <li class="social-facebook">
-                                            <a class="tooltip-top" target="_blank" href="https://www.facebook.com/preyantechnosys19" data-tooltip="Facebook">
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social-twitter">
-                                            <a class="tooltip-top" target="_blank" href="https://twitter.com/PreyanTechnosys" data-tooltip="Twitter">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social-flickr">
-                                            <a class=" tooltip-top" target="_blank" href="https://www.flickr.com/photos/166353669@N03/" data-tooltip="Flickr">
-                                                <i class="fa fa-flickr" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social-linkedin">
-                                            <a class=" tooltip-top" target="_blank" href="https://www.linkedin.com/in/preyan-technosys-pvt-ltd/" data-tooltip="LinkedIn">
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 widget-area">
-                            <div class="widget widget_nav_menu clearfix">
-                                <h3 class="widget-title">Our Services</h3>
-                                <ul class="menu-footer-services">
-                                    <li><a href="#">Ballon Service</a></li>
-                                    <li><a href="#">Wedding Service</a></li>
-                                
-                                </ul>
-                            </div>
-                        </div>
-                     
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
-                            <div class="widget flicker_widget clearfix">
-                                <h3 class="widget-title">Instagram Gallery</h3>
-                                <div class="widget_media_gallery">
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/01.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/01.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/02.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/05.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/03.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/02.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/04.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/10.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/05.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/03-540x640.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/06.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/04-770x770.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled ">
+                    <li><a href="./index.html" class="text-info text-decoration-none">Balloon</a></li>
+                    <li><a href="./wedding-service.html" class="text-info text-decoration-none">Wedding</a></li>
+                    <li><a href="./portfolio-style-01.html" class="text-info text-decoration-none">Portfolio</a></li>
+                    <li><a href="./contact-us.html" class="text-info text-decoration-none">Contact</a></li>
+                </ul>
             </div>
-            <div class="bottom-footer-text">
-                <div class="container">
-                    <div class="row copyright">
-                        <div class="col-md-12">
-                            <div class="text-center">
-                                <!-- <span>Copyright ©null.&nbsp;All rights reserved by &nbsp;<a href="https://themetechmount.com/" target="_blank">Ballo.</a></span> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+
+            <!-- Contact & Newsletter -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="mb-3">Contact Us</h5>
+                <p><i class="fa fa-map-marker me-2"></i>Josling Close, W12 7DF</p>
+                <p><i class="fa fa-map-marker me-2"></i>School Passage, Southall, UB1 2DS</p>
+                <p><i class="fa fa-phone me-2"></i>07351572758</p>
+                <p><i class="fa fa-envelope me-2"></i>enquiries@theballoonart.co.uk</p>
+
+                <!-- <h6 class="mt-3 mb-2">Newsletter</h6>
+                <form class="d-flex" id="subscribe-form">
+                    <input type="email" class="form-control me-2" placeholder="Your email" required>
+                    <button class="btn btn-warning" type="submit">Subscribe</button>
+                </form> -->
             </div>
-        </footer>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <!-- Bottom Footer -->
+        <div class="row">
+            <div class="col-md-12 text-center pb-3">
+                <p class="mb-0">&copy; 2026 Balloon Art. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
         <!--footer end-->
 
         <!--back-to-top start-->
@@ -586,6 +380,9 @@
     <script src="js/main.js"></script>
 
     <!-- Javascript end-->
+<a href="tel:07351572758" class="phone-float" title="Call Us">
+    <i class="fa fa-phone"></i>
+</a>
 
     <a href="https://wa.me/message/UDFX55CLDL4PL1"
     target="_blank"
