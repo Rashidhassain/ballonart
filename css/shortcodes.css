@@ -298,10 +298,10 @@
 }
 
 .bg-img2 {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0, 0, 0, 0.51)), url(../images/bg-image/birthday-party.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0, 0, 0, 0.51)), url(../images/bg-image/honeybee.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: bottom;
 }
 
 .bg-img3 {

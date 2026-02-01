@@ -54,32 +54,21 @@
     <link rel="stylesheet" href="css/index.css">
 
     <style>
-        .hero-form-section {
+.hero-form-section {
 	position: relative;
-	background-image: url("images/bg-image/gabriel-tudor-V-yhwaT6JrY-unsplash.jpg"); /* from your code */
+	background-image: url("images/bg-image/gabriel-tudor-V-yhwaT6JrY-unsplash.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	padding: 100px 0;
-    margin-top: 100px;
+	padding: 80px 0; /* reduced for mobile-friendly spacing */
 }
 
-/* dark overlay for readability */
 .hero-form-section::before {
 	content: "";
 	position: absolute;
 	inset: 0;
-background: linear-gradient(
-	to right,
-	rgba(255, 255, 255, 0.11),
-	rgba(255, 255, 255, 0.05)
-);
-
-/* background: linear-gradient(
-	to right,
-	rgba(255, 111, 174, 0.35),
-	rgba(123, 97, 255, 0.2)
-); */
+	/* background: linear-gradient(to right, rgba(255,255,255,0.1), rgba(255,255,255,0.05)); */
+	background: linear-gradient(to right, rgb(174 172 172 / 52%), rgba(255, 255, 255, 0.05));
 	z-index: 0;
 }
 
@@ -88,13 +77,70 @@ background: linear-gradient(
 	z-index: 1;
 }
 
-/* form card glass effect */
+/* Form card glass effect */
 .hero-form-section .card {
 	backdrop-filter: blur(10px);
 	border-radius: 20px;
 }
 
-    </style>
+/* Hero text adjustments */
+.hero-form-section h1 {
+	font-size: 2.2rem; /* base size for mobile */
+	line-height: 1.3;
+}
+
+.hero-form-section p.lead {
+	font-size: 1rem;
+}
+
+/* Icon boxes */
+.hero-form-section .d-flex i {
+	min-width: 40px;
+}
+
+/* Desktop hover and active for nav */
+.nav-link {
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+	color: #ffc107 !important;
+}
+
+.nav-link.active::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #ffc107;
+	margin-top: 4px;
+	border-radius: 2px;
+}
+
+/* Responsive tweaks */
+@media (min-width: 768px) {
+	.hero-form-section h1 {
+		font-size: 3rem;
+	}
+	.hero-form-section p.lead {
+		font-size: 1.2rem;
+	}
+}
+
+@media (min-width: 992px) {
+	.hero-form-section h1 {
+		font-size: 3.5rem;
+	}
+	.hero-form-section p.lead {
+		font-size: 1.3rem;
+	}
+	.hero-form-section .ps-lg-5 {
+		padding-left: 3rem;
+	}
+}
+</style>
+
 </head>
 
 <body>
@@ -104,52 +150,54 @@ background: linear-gradient(
 
 
         <!--header start-->
-        <header id="masthead" class="header ttm-header-style-01">
-            <div id="site-header-menu" class="site-header-menu ttm-bgcolor-darkgrey">
-                <div class="site-header-menu-inner ttm-stickable-header">
-                    <div class="container">
-                        <!--site-navigation -->
-                        <div class="site-navigation d-flex flex-row align-items-center">
-                            
-                            <!-- site-branding -->
-                            <div class="site-branding">
-                                <a class="home-link" href="./index.html" rel="home">
-                                    <h4>Ballon Art</h4>
-                                </a>
-                            </div>
-        
-                            <!-- Mobile Menu Button -->
-                            <div class="btn-show-menu-mobile menubar menubar--squeeze">
-                                <span class="menubar-box">
-                                    <span class="menubar-inner"></span>
-                                </span>
-                            </div>
-        
-                            <!-- menu -->
-                            <nav class="main-menu menu-mobile ms-auto" id="menu">
-                                <ul class="menu">
-                                    <li class="mega-menu-item active">
-                                        <a href="./index.html" >Ballon</a>
-                                    </li>
-                                    <li class="mega-menu-item">
-                                        <a href="./wedding-service.html" >Wedding</a>
-                                    </li>
-                                    <li class="mega-menu-item">
-                                        <a href="./portfolio-style-01.html" >Portfolio</a>
-                                    </li>
-                                    <li>
-                                        <a href="./contact-us.html">Contact Us</a>
-                                    </li>
-                                </ul>
-                            </nav>
-        
-                        </div>
-                        <!-- site-navigation end-->
-                    </div>
-                </div>
+<header id="masthead" class="header shadow-sm">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-3">
+            
+            <!-- Logo -->
+            <div class="site-branding">
+                <a href="./index.html" class="text-dark text-decoration-none fw-bold fs-4">
+                    The Ballon Art
+                </a>
             </div>
-        </header>
-        
+
+            <!-- Desktop Menu -->
+            <nav class="d-none d-lg-block">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link text-dark px-3">Balloon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./wedding-service.html" class="nav-link text-dark px-3">Wedding</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./portfolio-style-01.html" class="nav-link text-dark px-3">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact-us.html" class="nav-link text-dark px-3">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Hamburger for Mobile -->
+            <div class="d-lg-none">
+                <button class="btn btn-outline-dark" id="mobileToggle">
+                    <i class="fa fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu d-lg-none bg-white shadow-sm" id="mobileMenu" style="display:none;">
+        <ul class="list-unstyled mb-0">
+            <li><a href="./index.html" class="d-block py-2 px-3 text-dark">Balloon</a></li>
+            <li><a href="./wedding-service.html" class="d-block py-2 px-3 text-dark">Wedding</a></li>
+            <li><a href="./portfolio-style-01.html" class="d-block py-2 px-3 text-dark">Portfolio</a></li>
+            <li><a href="./contact-us.html" class="d-block py-2 px-3 text-dark">Contact Us</a></li>
+        </ul>
+    </div>
+</header>
         <!--header end-->
 
 
@@ -259,8 +307,6 @@ background: linear-gradient(
 		</div>
 	</div>
 </section>
-
-
         <!--END REVOLUTION SLIDER-->
 
 
@@ -409,13 +455,13 @@ background: linear-gradient(
                             </div>
                         </div> -->
                         <div class="featured-imagebox">
-                            <img src="images/bg-image/kids_themed_balloon_decor.png" alt="image">
+                            <img src="images/bg-image/kids_themed_balloon_decor.jpeg" alt="image">
                             <div class="featured-title"><h5>* Kids’ themed balloon décor</h5>
                             <p>Our kids’ themed balloon décor brings favorite characters, colors, and creative designs to life, making birthdays and celebrations exciting, joyful, visually appealing, and unforgettable for children and families.</p>
                             </div>
                         </div>
                         <div class="featured-imagebox">
-                            <img src="images/bg-image/organic_balloon_garlands.webp" alt="image">
+                            <img src="images/bg-image/organic_balloon_garlands.jpeg" alt="image">
                             <div class="featured-title"><h5>* Organic balloon garlands</h5>
                             <p>We create stunning organic balloon garlands using mixed sizes, premium colors, and artistic styling that beautifully enhance event entrances, stages, photo backdrops, and celebration spaces with elegance.</p>
                             </div>
@@ -772,203 +818,73 @@ background: linear-gradient(
 
 
         <!--footer start-->
-        <footer class="footer widget-footer clearfix">
-            <div class="first-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <div class="first-footer-inner">
-                                <div class="footer-logo">
-                                    <h3>Ballon Art</h3>
-                                </div>
-                                <div class="row no-gutters footer-box">
-                                    <div class="col-md-4 widget-area">
-                                        <div class="featured-box text-center">
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h5>Our Address</h5>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p> josling close w12 7df, school passages UB1 2DS southall. UK</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 widget-area">
-                                        <div class="featured-box text-center">
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h5>Talk To Expert</h5>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>07351572758</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 widget-area">
-                                        <div class="featured-box text-center">
-                                            <div class="featured-content">
-                                                <div class="featured-title">
-                                                    <h5>Email Us</h5>
-                                                </div>
-                                                <div class="featured-desc">
-                                                    <p>enquiries@theballoonart.co.uk</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row no-gutters">
-                                    <div class="col-md-3 col-sm-2"></div>
-                                    <div class="col-md-6 col-sm-8">
-                                        <form id="subscribe-form" class="newsletter-form" method="post" action="#" data-mailchimp="true">
-                                            <div class="mailchimp-inputbox clearfix" id="subscribe-content">
-                                                <p>
-                                                    <i class="fa fa-envelope-o"></i>
-                                                    <input type="email" name="email" placeholder="Your Email Address.." required="">
-                                                </p>
-                                                <p>
-                                                    <button class="submit ttm-btn ttm-btn-size-sm ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor ttm-icon-btn-right" type="submit">Submit<i class="ti ti-arrow-right"></i></button>
-                                                </p>
-                                            </div>
-                                            <div id="subscribe-msg"></div>
-                                        </form>
-                                    </div>
-                                    <div class="col-md-3 col-sm-2"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <footer class="footer bg-dark text-dark pt-5">
+    <div class="container">
+        <div class="row">
+
+            <!-- About Section -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="mb-3">About Balloon Art</h5>
+                <p>We create vibrant and unforgettable balloon decorations for all occasions — from birthdays to weddings and corporate events. Our team ensures premium quality and timely delivery for a magical experience.</p>
+                <div class="social-icons mt-3">
+                    <a href="https://www.facebook.com/preyantechnosys19" target="_blank" class="me-2"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="https://twitter.com/PreyanTechnosys" target="_blank" class="me-2"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/preyan-technosys-pvt-ltd/" target="_blank" class="me-2"><i class="fa fa-linkedin fa-lg"></i></a>
                 </div>
             </div>
-            <div class="second-footer">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 widget-area">
-                            <div class="widget widget_text  clearfix">
-                                <h3 class="widget-title">About Ballon Art</h3>
-                                <div class="textwidget widget-text">We’ve delivered stunning balloon art experiences over the last two decades and are now ready to create a whole new chapter of vibrant, memorable celebrations. We have crafted spectacular balloon installations for reputed clients and prestigious events worldwide.<br><br>
-                                </div>
-                                <div class="social-icons circle social-hover">
-                                    <ul class="list-inline">
-                                        <li class="social-facebook">
-                                            <a class="tooltip-top" target="_blank" href="https://www.facebook.com/preyantechnosys19" data-tooltip="Facebook">
-                                                <i class="fa fa-facebook" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social-twitter">
-                                            <a class="tooltip-top" target="_blank" href="https://twitter.com/PreyanTechnosys" data-tooltip="Twitter">
-                                                <i class="fa fa-twitter" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social-flickr">
-                                            <a class=" tooltip-top" target="_blank" href="https://www.flickr.com/photos/166353669@N03/" data-tooltip="Flickr">
-                                                <i class="fa fa-flickr" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                        <li class="social-linkedin">
-                                            <a class=" tooltip-top" target="_blank" href="https://www.linkedin.com/in/preyan-technosys-pvt-ltd/" data-tooltip="LinkedIn">
-                                                <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2 widget-area">
-                            <div class="widget widget_nav_menu clearfix">
-                                <h3 class="widget-title">Our Services</h3>
-                                <ul class="menu-footer-services">
-                                    <li><a href="#">Ballon Service</a></li>
-                                    <li><a href="#">Wedding Service</a></li>
-                                
-                                </ul>
-                            </div>
-                        </div>
-                     
-                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 widget-area">
-                            <div class="widget flicker_widget clearfix">
-                                <h3 class="widget-title">Instagram Gallery</h3>
-                                <div class="widget_media_gallery">
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/01.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/01.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/02.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/05.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/03.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/02.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/04.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/10.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/05.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/03-540x640.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                    <figure class="gallery-item">
-                                        <div class="ttm-box-view-overlay">
-                                            <img class="img-fluid" src="images/gallery/06.jpg" alt="Gallery" title="gallery-img">
-                                            <div class="ttm-media-link">
-                                                <a class="ttm_prettyphoto ttm_image" title="gallery" data-rel="prettyPhoto" href="images/portfolio/04-770x770.jpg">
-                                                <i class="ti ti-search"></i>
-                                            </a>
-                                            </div>
-                                        </div>
-                                    </figure>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h5 class="mb-3">Quick Links</h5>
+                <ul class="list-unstyled ">
+                    <li><a href="#" class="text-info text-decoration-none">Home</a></li>
+                    <li><a href="#services" class="text-info text-decoration-none">Services</a></li>
+                    <li><a href="#about" class="text-info text-decoration-none">About Us</a></li>
+                    <li><a href="#contact" class="text-info text-decoration-none">Contact</a></li>
+                    <li><a href="#faq" class="text-info text-decoration-none">FAQ</a></li>
+                </ul>
             </div>
-            <div class="bottom-footer-text">
-                <div class="container">
-                    <div class="row copyright">
-                        <div class="col-md-12">
-                            <div class="text-center">
-                                <!-- <span>Copyright ©null.&nbsp;All rights reserved by &nbsp;<a href="https://themetechmount.com/" target="_blank">Ballo.</a></span> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+            <!-- Services -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="mb-3">Our Services</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-info text-decoration-none">Balloon Decorations</a></li>
+                    <li><a href="#" class="text-info text-decoration-none">Wedding Events</a></li>
+                    <li><a href="#" class="text-info text-decoration-none">Birthday Parties</a></li>
+                    <li><a href="#" class="text-info text-decoration-none">Corporate Events</a></li>
+                    <li><a href="#" class="text-info text-decoration-none">Custom Balloon Art</a></li>
+                </ul>
             </div>
-        </footer>
+
+            <!-- Contact & Newsletter -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <h5 class="mb-3">Contact Us</h5>
+                <p><i class="fa fa-map-marker me-2"></i>Josling Close, W12 7DF</p>
+                <p><i class="fa fa-map-marker me-2"></i>School Passage, Southall, UB1 2DS</p>
+                <p><i class="fa fa-phone me-2"></i>07351572758</p>
+                <p><i class="fa fa-envelope me-2"></i>enquiries@theballoonart.co.uk</p>
+
+                <!-- <h6 class="mt-3 mb-2">Newsletter</h6>
+                <form class="d-flex" id="subscribe-form">
+                    <input type="email" class="form-control me-2" placeholder="Your email" required>
+                    <button class="btn btn-warning" type="submit">Subscribe</button>
+                </form> -->
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <!-- Bottom Footer -->
+        <div class="row">
+            <div class="col-md-12 text-center pb-3">
+                <p class="mb-0">&copy; 2026 Balloon Art. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
         <!--footer end-->
 
 
@@ -1064,7 +980,31 @@ background: linear-gradient(
     <i class="fa fa-whatsapp"></i>
 </a>
 
+<script>
+// Highlight current page
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('nav .nav-link, .mobile-menu a');
+    const current = location.pathname.split("/").pop();
 
+    links.forEach(link => {
+        if(link.getAttribute('href') === current || (current === "" && link.getAttribute('href') === "index.html")){
+            link.classList.add('active');
+        }
+    });
+
+    // Mobile toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileToggle.addEventListener('click', function() {
+        if(mobileMenu.style.display === "none" || mobileMenu.style.display === ""){
+            mobileMenu.style.display = "block";
+        } else {
+            mobileMenu.style.display = "none";
+        }
+    });
+});
+</script>
 
 </body>
 
