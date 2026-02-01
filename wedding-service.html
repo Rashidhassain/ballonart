@@ -609,40 +609,49 @@
                                             </div>
                                         </div>
                                         <!--section title end-->
-                                        <form id="contact_form" class="contact_form wrap-form mt-45 clearfix" method="post" action="#">
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <label>
-                                                        <span class="text-input select-text">
-                                                           <select name="orderby" class="select2-hidden-accessible">
-                                                                <option value="menu_order" selected="selected">Select Your Services</option>
-                                                                <option value="rating">Wedding Stories</option>
-                                                                <option value="date">Planning</option>
-                                                                <option value="price">General</option>
-                                                            </select>
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                                <div class="col-lg-12">
-                                                    <label>
-                                                        <span class="text-input"><input name="address" type="text" value="" placeholder="Your Name*" required="required"></span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-6">
-                                                    <label>
-                                                        <span class="text-input"><input name="phone" type="text" value="" placeholder="Phone*" required="required"></span>
-                                                    </label>
-                                                </div>
-                                                <div class="col-lg-6">
-                                                    <label>
-                                                        <span class="text-input"><input name="code" type="text" value="" placeholder="Email*" required="required"></span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor w-100 mt-5" type="submit">Send A Request</button>
-                                        </form>
+                                     <form id="contact_form" class="contact_form wrap-form mt-45 clearfix" method="post" action="sendmail.php">
+    <div class="row">
+        <div class="col-lg-12">
+            <label>
+                <span class="text-input select-text">
+                    <select name="service" class="select2-hidden-accessible" required>
+                        <option value="" selected>Select Your Services</option>
+                        <option value="wedding_stories">Wedding Stories</option>
+                        <option value="planning">Planning</option>
+                        <option value="general">General</option>
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="col-lg-12">
+            <label>
+                <span class="text-input">
+                    <input name="name" type="text" placeholder="Your Name*" required>
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <label>
+                <span class="text-input">
+                    <input name="phone" type="text" placeholder="Phone*" required>
+                </span>
+            </label>
+        </div>
+        <div class="col-lg-6">
+            <label>
+                <span class="text-input">
+                    <input name="email" type="email" placeholder="Email*" required>
+                </span>
+            </label>
+        </div>
+    </div>
+    <button class="submit ttm-btn ttm-btn-size-md ttm-btn-shape-rounded ttm-btn-style-fill ttm-btn-color-skincolor w-100 mt-5" type="submit">
+        Send A Request
+    </button>
+</form>
+
                                     </div>
                                 </div>
                                 <div class="col-lg-5">
@@ -685,6 +694,7 @@
                     <a href="https://www.facebook.com/preyantechnosys19" target="_blank" class="me-2"><i class="fa fa-facebook fa-lg"></i></a>
                     <a href="https://twitter.com/PreyanTechnosys" target="_blank" class="me-2"><i class="fa fa-twitter fa-lg"></i></a>
                     <a href="https://www.linkedin.com/in/preyan-technosys-pvt-ltd/" target="_blank" class="me-2"><i class="fa fa-linkedin fa-lg"></i></a>
+                    <a href="https://www.instagram.com/theballoonart" target="_blank" class="me-2"><i class="fa fa-instagram fa-lg"></i></a>
                 </div>
             </div>
 
