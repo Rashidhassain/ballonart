@@ -7,14 +7,71 @@
     <title>Contact Us | The Balloon Art</title>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+   
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 
-    <!-- Font Awesome -->
+    <!-- animate -->
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+
+    <!-- flaticon -->
+    <link rel="stylesheet" type="text/css" href="css/flaticon.css" />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+
+    <!-- themify -->
+    <link rel="stylesheet" type="text/css" href="css/themify-icons.css" />
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css">
+
+    <!-- prettyphoto -->
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+
+    <!-- shortcodes -->
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css" />
+
+    <!-- main -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <!-- main -->
+    <link rel="stylesheet" type="text/css" href="css/megamenu.css" />
+
+    <!-- responsive -->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+
+    <!-- REVOLUTION LAYERS STYLES -->
+    <link rel='stylesheet' id='rs-plugin-settings-css' href="revolution/css/rs6.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index.css">
+
+
+            <style>
+
+/* Desktop hover and active for nav */
+.nav-link {
+	transition: all 0.3s ease;
+	position: relative;
+}
+
+.nav-link:hover, .nav-link.active {
+	color: #ffc107 !important;
+}
+
+.nav-link.active::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #ffc107;
+	margin-top: 4px;
+	border-radius: 2px;
+}
+
+
+</style>
 
     <style>
         /* =====================
@@ -128,17 +185,52 @@
 <body>
 
 <!-- HEADER -->
-<header class="bg-white shadow-sm">
-    <div class="container py-3 d-flex justify-content-between align-items-center">
-        <a href="index.html" class="fw-bold fs-4 text-dark text-decoration-none">
-            The Balloon Art
-        </a>
-        <nav>
-            <a href="index.html" class="me-3 text-dark">Balloon</a>
-            <a href="wedding-service.html" class="me-3 text-dark">Wedding</a>
-            <a href="portfolio-style-01.html" class="me-3 text-dark">Portfolio</a>
-            <a href="contact-us.html" class="text-dark fw-bold">Contact</a>
-        </nav>
+       <header id="masthead" class="header shadow-sm">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-3">
+            
+            <!-- Logo -->
+            <div class="site-branding">
+                <a href="./index.html" class="text-dark text-decoration-none fw-bold fs-4">
+                    The Ballon Art
+                </a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <nav class="d-none d-lg-block">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link text-dark px-3">Balloon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./wedding-service.html" class="nav-link text-dark px-3">Wedding</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./portfolio-style-01.html" class="nav-link text-dark px-3 fw-bold">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./contact-us.html" class="nav-link text-dark px-3">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Hamburger for Mobile -->
+            <div class="d-lg-none">
+                <button class="btn btn-outline-dark" id="mobileToggle">
+                    <i class="fa fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu d-lg-none bg-white shadow-sm" id="mobileMenu" style="display:none;">
+        <ul class="list-unstyled mb-0">
+            <li><a href="./index.html" class="d-block py-2 px-3 text-dark">Balloon</a></li>
+            <li><a href="./wedding-service.html" class="d-block py-2 px-3 text-dark">Wedding</a></li>
+            <li><a href="./portfolio-style-01.html" class="d-block py-2 px-3 text-dark">Portfolio</a></li>
+            <li><a href="./contact-us.html" class="d-block py-2 px-3 text-dark">Contact Us</a></li>
+        </ul>
     </div>
 </header>
 
@@ -197,7 +289,7 @@
 
             <!-- RIGHT FORM -->
            <!-- RIGHT FORM -->
-<div class="col-lg-7">
+<div class="col-lg-7" id="contact-form-section">
     <div class="contact-form-card">
         <h4 class="mb-4">Send Us a Message</h4>
         <form action="sendmail.php" method="POST">
@@ -312,5 +404,33 @@
     class="whatsapp-float">
      <i class="fa fa-whatsapp"></i>
  </a>
+
+ 
+
+ <script>
+// Highlight current page
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('nav .nav-link, .mobile-menu a');
+    const current = location.pathname.split("/").pop();
+
+    links.forEach(link => {
+        if(link.getAttribute('href') === current || (current === "" && link.getAttribute('href') === "index.html")){
+            link.classList.add('active');
+        }
+    });
+
+    // Mobile toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileToggle.addEventListener('click', function() {
+        if(mobileMenu.style.display === "none" || mobileMenu.style.display === ""){
+            mobileMenu.style.display = "block";
+        } else {
+            mobileMenu.style.display = "none";
+        }
+    });
+});
+</script>
 </body>
 </html>

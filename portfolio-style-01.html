@@ -389,7 +389,31 @@
     class="whatsapp-float">
      <i class="fa fa-whatsapp"></i>
  </a>
+<script>
+// Highlight current page
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('nav .nav-link, .mobile-menu a');
+    const current = location.pathname.split("/").pop();
 
+    links.forEach(link => {
+        if(link.getAttribute('href') === current || (current === "" && link.getAttribute('href') === "index.html")){
+            link.classList.add('active');
+        }
+    });
+
+    // Mobile toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    mobileToggle.addEventListener('click', function() {
+        if(mobileMenu.style.display === "none" || mobileMenu.style.display === ""){
+            mobileMenu.style.display = "block";
+        } else {
+            mobileMenu.style.display = "none";
+        }
+    });
+});
+</script>
 
 </body>
 
