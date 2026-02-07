@@ -175,3 +175,8 @@
     color: #fff;
 }
 
+
+header{
+    /* background-color: #01590E #FDFBD4; */
+    background: linear-gradient(to right, #66B572, #66B572);
+}
